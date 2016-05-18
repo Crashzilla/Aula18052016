@@ -44,7 +44,7 @@ public class Funcionario implements Serializable {
 	{@JoinColumn(name="FUNCIONARIO_ID", nullable=false, updatable=false)},
 	inverseJoinColumns = {@JoinColumn(name="TAREFA_ID", nullable=false,
 	updatable=false)})
-	private Set<Tarefa> tarefa = new HashSet<>();
+	private Set<Tarefa> tarefas = new HashSet<>();
 
 	public Integer getId() {
 		return id;
@@ -71,10 +71,10 @@ public class Funcionario implements Serializable {
 	}
 
 	public Set<Tarefa> getTarefa() {
-		return tarefa;
+		return tarefas;
 	}
 
-	public void setTarefa(Set<Tarefa> tarefa) {
-		this.tarefa = tarefa;
+	public void setTarefa(Set<Tarefa> tarefas) {
+		this.tarefas = tarefas;
 	}   
 }
